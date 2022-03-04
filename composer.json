@@ -1,0 +1,60 @@
+{
+    "name": "phonyland/generator-data-template",
+    "description": "\ud83d\udd36 Generator Data Template for \ud83d\ude43 Phony Framework",
+    "license": "MIT",
+    "type": "phony-generator-data",
+    "keywords": [
+        "php",
+        "framework",
+        "phony",
+        "random",
+        "faker",
+        "ngram",
+        "seeding",
+        "generator",
+        "template"
+    ],
+    "authors": [
+        {
+            "name": "Yunus Emre Delig\u00f6z",
+            "email": "ye@deligoz.me"
+        }
+    ],
+    "require": {
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "phonyland/dev-tools": "dev-master"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "infection/extension-installer": true,
+            "pestphp/pest-plugin": true,
+            "phonyland/generator-manager": true,
+            "phpstan/extension-installer": true,
+            "symfony/thanks": true
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "phonyland": {
+            "data-package-for": "generator-template"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@normalize",
+            "@validate",
+            "@thanks"
+        ],
+        "lint": "php-cs-fixer fix -v",
+        "normalize": "@composer normalize --ansi --no-interaction --quiet",
+        "test": "@test:lint",
+        "test:lint": "php-cs-fixer fix -v --dry-run",
+        "thanks": "@composer thanks --ansi --no-interaction --quiet",
+        "validate": "@composer validate --strict --ansi --no-interaction"
+    }
+}
