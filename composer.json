@@ -21,7 +21,8 @@
         }
     ],
     "require": {
-        "php": "^8.0"
+        "php": "^8.0",
+        "phonyland/generator-template": "dev-master"
     },
     "require-dev": {
         "phonyland/dev-tools": "dev-master"
@@ -38,11 +39,6 @@
             "symfony/thanks": true
         },
         "sort-packages": true
-    },
-    "extra": {
-        "phonyland": {
-            "data-package-for": "generator-template"
-        }
     },
     "scripts": {
         "post-autoload-dump": [
