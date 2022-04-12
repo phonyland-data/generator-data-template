@@ -1,5 +1,5 @@
 {
-    "name": "phonyland/generator-data-template",
+    "name": "phonyland-data/generator-data-template",
     "description": "\ud83d\udd36 Generator Data Template for \ud83d\ude43 Phony Framework",
     "license": "MIT",
     "type": "phony-generator-data",
@@ -21,11 +21,10 @@
         }
     ],
     "require": {
-        "php": "^8.0",
-        "phonyland/generator-template": "dev-master"
+        "php": "^8.0"
     },
     "require-dev": {
-        "phonyland/dev-tools": "dev-master"
+        "phonyland/generator-template": "dev-master"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
